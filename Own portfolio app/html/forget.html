@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <center>
+    <form style="background-color: orange;">
+        <img src="/img/logo.jpg" width = "50" height = "50" alt="">
+        <h1 style="background-color: rgb(249, 229, 118); font-family: 'Times New Roman', Times, serif;">MT Group</h1>
+        <br>
+        <h2>Password reset link would sent on the fiven email by you - </h2>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="email"  style="width: 200px; margin-top: 100px;" class="form-control" />
+            <label class="form-label" for="email">Email address</label>
+          </div>
+          <button type="button" id="forgetbtn">Reset Password</button>
+    </form>
+    </center>
+    <script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyChqr4FikTuHmF5XXa4I7uNKoP_RZDEhXw",
+    authDomain: "mt-group-ebb26.firebaseapp.com",
+    databaseURL: "https://mt-group-ebb26-default-rtdb.firebaseio.com",
+    projectId: "mt-group-ebb26",
+    storageBucket: "mt-group-ebb26.appspot.com",
+    messagingSenderId: "91239097526",
+    appId: "1:91239097526:web:09bcfe331a04cc0e63f217"
+  };
+
+  // Initialize Firebase
+  var app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+  forgetbtn.addEventListener("click", (e)=>{
+var email = document.getElementById("email").value
+sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+    alert("Email sent!! pls verify");
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    alert(errorMessage);
+  });
+  });
+      
+
+
+    </script>
+</body>
+</html>

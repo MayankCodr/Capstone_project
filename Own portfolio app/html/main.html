@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@300&family=Open+Sans:wght@300;400&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>MT Group</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo.jpg"  width="60" height="60" class="d-inline-block align-top" alt="">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#packages">Packages</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Tech Works
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#webdev">Web developement</a></li>
+                <li><a class="dropdown-item" href="#gamedev">App/Game developement</a></li>
+                <li><a class="dropdown-item" href="#AI">AI Apps developement</a></li>
+            </ul>
+        </div>
+        </ul>
+        <button class="btn btn-success" style="margin-left: 510px; margin-right: 10px;" id="loginButton" onclick="login()">
+            Login
+        </button>
+        
+        <button class="btn btn-danger"  id="signupButton" onclick="register()">
+            Sign Up
+        </button>
+       <img src="/img/icon1.png" width="50" height="50">
+       <a href="https://console.dialogflow.com/api-client/demo/embedded/a4cd808f-5220-4be7-8af5-494d5e3ef165" target="_blank" style="text-decoration: none; color: black;">Chat with us</a>
+      </div>
+    </nav>
+    <section id="home">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/carousel_img1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Future developement</h5>
+              <p>Our company mostly focusses on our future requirements. And according to that only we lauch our products.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/carousel_img2.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>AI developement</h5>
+              <p>AI is one of the most important need of future. Our company works on it and tries to make it better.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/carousel_img3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/carousel_img4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>App developement</h5>
+              <p>To use AI APP and Games are the best means. Our company tries various experiments of AI using app developement itself.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+          
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section style="background-color: rgb(249, 212, 214);"  id="about">
+      <center>
+      <h1 id="abouthd">Origin</h1>
+      <hr style="height:5px; width: 80px; background-color: rgb(4, 3, 3); border-color: black;">
+    </center>
+     <section class="timeline">
+      <ul>
+        <li>
+          <div>
+            <time>2001</time> Mr. Mayank Sharma started this company at a smaller scale as a startup with a budget of 10000 INR with a team of 10 members.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2005</time> First Project for our company was finally hosted on our cloud domain.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2015</time> First AI project came into being which increases our companies net wroth and enters in the international market.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2016</time> MT-Group started its revolutionary project future developement. 
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2017</time> This project was rejected by most of the big tech companies and was held down.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2018</time> The revolutionary project reborned in 2018 by the increase in investment in IT industry by many companies.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2019</time> This project became the most significant project in tech industry in all times.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2021</time>  Our company still works on IT even in the corona period so that it doesn't gets wasted and prepared the ever AI app that can operate a robot which can do most of things ,named - "AryaBhatta" I 
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2022</time> Our company became the secondest biggest Tech company in the world.
+          </div>
+        </li>
+      </ul>
+    </section>   
+     </section>
+     <section id="packages" style="background-color: rgb(186, 254, 165);">
+      <div class="row row-cols-3q g-3">
+        <div class="col">
+      <div class="card" style="width: 18rem; margin-left: 50px;">
+        <img src="/img/carousel_img2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">AI Packages</h5>
+          <p class="card-text">Our Company is trying best in the field of AI technology and AI application development. We have the best packages of AI development. The cost is also lower than any other company. </p>
+<!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal1">
+          Know more...
+        </button>
+        </div>
+      </div>
+      </div>
+      <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Modal1Label">AI Packages</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Our Company is trying best in the field of AI technology and AI application development. We have the best packages of AI development. The cost is also lower than any other company. You can enroll into this package and become a member of MT-Group. This package also helps you to get all the relevant information needed to be the best AI developer and to think out of the box. By this package you get a certificate at the end. Using this certificate your chanches of hiring into our company increases and you can even get a raised salary. The average amount of salary you can get using this package is 1 lakh INR - 5 lakh INR. Which is a big amount! <br> We suppose! <br> COST OF ENROLLING IS JUST <b>5000 INR</b> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="/img/carousel_img3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Web developement packages</h5>
+          <p class="card-text"> Before doing aything else in the IT industry one must first learn how to make a basic website. Not only that but also how to make an website which is out of the box. For that we need to learn first the basic.</p>
+<!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal2">
+          Know more...
+        </button>
+        </div>
+      </div>
+      </div>
+      <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Modal1Label">Web developement Packages</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Before doing aything else in the IT industry one must first learn how to make a basic website. Not only that but also how to make an website which is out of the box. For that we need to learn first the basic. This package makes you learn web developement from the basic and then to the professional web developement. And it also gives you points to think out of the box while creating a website. You will get a certificate after completing this package. You can use it to get hired into our company as a professional web editor as well as developer with a salary ranging from 30000 INR to 4 Lakh INR. Which is a large amount! <br> We suppose!! <br>COST OF ENROLLING IS JUST <b>4000 INR</b>             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="/img/carousel_img4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">App/Game developement Packages</h5>
+            <p class="card-text">App/games are the most important parts of IT industry as it can be used to test the interest of people. Because nowadays apps/games are more popular. Our package helps you to lear app/game developement from the basic levels.</p>
+  <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal3">
+            Know more...
+          </button>
+          </div>
+        </div>
+        </div>
+        <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="Modal1Label">AI Packages</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                App/games are the most important parts of IT industry as it can be used to test the interest of people. Because nowadays apps/games are more popular. Our package helps you to lear app/game developement from the basic levels.Using this package you would be able to create apps/games and even host them to your own domain and send them to google play store or app stores. Using this package you can also make your dream apps such as MT- Official app or YouTube. At the end of this package you will get a certificate which you can used to get hired into our company. <br> This all you can get and learn at a very low cost - <b>3000 INR</b>
+             </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+  
+      </div>
+    
+     </section>
+     <section id="webdev">
+      <center>
+      <h1 style="font-family: times new roman;">TECH WORKS - WEB DEVELOPEMENT  </h1>
+      </center>
+      <img width="100%" height="500px" src="/img/img1.jpg" alt="">
+      <h3 style="text-align: center; background-color: rgb(255, 194, 194);" id="webdevhd">Web development</h3>
+      <center>
+      
+      <div id="webdevtext">
+      <p>commanly know as website developement, is one of the oldest platforms in which our company had worked upon. It all started in 2001 that are own first official website was lauched. Then from different categories of website like portfolio, blog and to AI powered websites. Our company has played a great role into it. </p>
+      <h4>Tech Works</h4>
+      <ul>
+        <li>First ever website build for hospitals and other medical field - 2010</li>
+        <li>First ever website powered bot with voice assisstant - 2015</li>
+        <li>Working on different AI websites projects - 2019</li>
+        <li>First MT-Group powered AI website - 2022</li>
+      </ul>
+      <p>And much more...</p>
+      </div>
+      </center>
+     </section>
+     <section id="gamedev">
+      <center>
+        <h1 style="font-family: times new roman;">TECH WORKS - GAME/APP DEVELOPEMENT  </h1>
+        <img src="/img/gamedev.jpeg" width="100%" height="500px" alt="">
+        <h3 style="text-align: center; background-color: rgb(255, 194, 194);" id="webdevhd">Game/App development</h3>
+        <div id="webdevtext">
+          <p>Game/ app developement is the field of IT in which most of the futuristic demos or tests are held. In fact gaming is the only field in which AI firstly originated. Apps are the mostly used aplication of IT by us. Using apps, we can check the interest of the people. Our company is playing the most vital role in app/game development, and trying to make best apps/games of all time using AI.</p>
+          <h4>Tech Works</h4>
+          <ul>
+            <li>First game developed using Mixed reality - 2022</li>
+            <li>Most popular game in the public with the  most downloads</li>
+            <li>First game powered by AI</li>
+            <li>Many useful apps that are used by many people.</li>
+          </ul>
+          <p>And much more..</p>
+        </div>
+      </center>
+     </section>
+     <section id="AI">
+      <center>
+        <h1 style="font-family: times new roman;">TECH WORKS - AI DEVELOPEMENT  </h1>
+        <img src="/img/aidev.png" width="100%" height="500px" alt="">
+        <h3 style="text-align: center; background-color: rgb(255, 194, 194);" id="webdevhd">AI development</h3>
+        <div id="webdevtext">
+          <p>This is most important field of IT nowadays and this is the only key to future. AI is the technology on which our future generations will relay. Our company is focussing most on this field as it will only help us make our future bright. AI development has now become the necessity of our lives. There are many reasons for this that's why our company focusses on this field the most. AI is now about to change the world and we are in the stage of changing.</p>
+          <h4>Tech Works</h4>
+          <ul>
+            <li>AI powered apps</li>
+            <li>Updating functions and uses of AI.</li>
+            <li>AI powered robots which do sorts of things at our home.</li>
+            <li>Trying to lower the cost of AI dvelopment.</li>
+          </ul>
+          <p>And much more..</p>
+        </div>
+      </center>
+     </section>
+     <footer style="background-color: black; color: white;">
+      <p>Copyright2022&copy;MT-Group </p>
+     </footer>
+    
+    <script src="/js/main.js"></script>
+    <script src="/js/timeline.js"></script>
+  </body>
+</html>

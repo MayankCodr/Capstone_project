@@ -1,0 +1,58 @@
+#signinbtn{
+    border: none;
+ margin-bottom: 30px;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-bottom: 5px;
+ padding-top: 5px;
+ background-color: red;
+ color: white;
+}
+
+#signinbtn:hover{
+    background-color: white;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: red;
+    color: red;
+    border-width: 3px;
+}
+#signupbtn{
+    border: none;
+ margin-bottom: 30px;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-bottom: 5px;
+ padding-top: 5px;
+ background-color: red;
+ color: white;
+}
+
+#signupbtn:hover{
+    background-color: white;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: red;
+    color: red;
+    border-width: 3px;
+}
+#forgetbtn{
+    margin-top: 10px;
+    border: none;
+ margin-bottom: 30px;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-bottom: 5px;
+ padding-top: 5px;
+ background-color: red;
+ color: white;
+}
+
+#forgetbtn:hover{
+    background-color: white;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: red;
+    color: red;
+    border-width: 3px;
+}

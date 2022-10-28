@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>login page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <center>
+    <form style="background-color: orange;">
+      <img src="/img/logo.jpg" width = "50" height = "50" alt="">
+      <h1 style="background-color: rgb(249, 229, 118); font-family: 'Times New Roman', Times, serif;">MT Group</h1>
+      <br>
+      <h2>Login Page</h2>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="email"  style="width: 200px; margin-top: 100px;" class="form-control" />
+          <label class="form-label" for="email">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="pass" style="width: 200px;" class="form-control" />
+          <label class="form-label" for="pass">Password</label>
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Remember"  />
+              <label class="form-check-label" for="Remember"> Remember me </label>
+            </div>
+          </div>
+      
+          <div class="col">
+            <!-- Simple link -->
+            <a href="forget.html">Forgot password?</a>
+          </div>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="button" id="signinbtn">Sign in</button>
+      
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href= "register.html">Register</a></p>
+        </div>
+      </form>
+    </center>
+    <footer style="margin-bottom: 0;">&copy;MTGroup Copyrights2021</footer>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyChqr4FikTuHmF5XXa4I7uNKoP_RZDEhXw",
+    authDomain: "mt-group-ebb26.firebaseapp.com",
+    databaseURL: "https://mt-group-ebb26-default-rtdb.firebaseio.com",
+    projectId: "mt-group-ebb26",
+    storageBucket: "mt-group-ebb26.appspot.com",
+    messagingSenderId: "91239097526",
+    appId: "1:91239097526:web:09bcfe331a04cc0e63f217"
+  };
+
+  // Initialize Firebase
+  var app = initializeApp(firebaseConfig);
+
+ 
+
+  const auth = getAuth();
+  signinbtn.addEventListener('click', (e) =>{
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("pass").value;
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      var email = document.getElementById("email").value;
+      localStorage.setItem("email", email);
+      window.location.replace("afterlogin.html");
+      alert("User Logged In!!")
+      const user = userCredential.user;
+
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
+  });
+    </script>
+</body>
+</html>
